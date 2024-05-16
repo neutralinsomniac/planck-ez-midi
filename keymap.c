@@ -24,11 +24,19 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    // major
     [0] = LAYOUT_planck_grid(
             MI_OCTD, MI_CH1, MI_CH2, MI_CH3, MI_CH4, MI_CH5, MI_CH6, MI_CH7, MI_CH8, MI_CH9, MI_CH10, MI_OCTU,
             KC_NO,   MI_Cs3, MI_Ds3, KC_NO,  MI_Fs3, MI_Gs3, MI_As3, KC_NO,  MI_Cs4, MI_Ds4, KC_NO,   MI_Fs4,
             MI_C3,   MI_D3,  MI_E3,  MI_F3,  MI_G3,  MI_A3,  MI_B3,  MI_C4,  MI_D4,  MI_E4,  MI_F4,   MI_G4,
-            MI_BNDD, MI_BNDU, MIDI_MONO, MIDI_POLY, KC_NO,  KC_NO,  KC_NO,  KC_NO,  MI_TRSD,  MI_TRSU,  MI_TR0,   MI_AOFF
+            MI_BNDD, MI_BNDU, MIDI_MONO, MIDI_POLY, KC_NO,  DF(1),  KC_NO,  KC_NO,  MI_TRSD,  MI_TRSU,  MI_TR0,   MI_AOFF
+            ),
+    // minor
+    [1] = LAYOUT_planck_grid(
+            MI_OCTD, MI_CH1, MI_CH2, MI_CH3, MI_CH4, MI_CH5, MI_CH6, MI_CH7, MI_CH8, MI_CH9, MI_CH10, MI_OCTU,
+            KC_NO,   MI_Cs3, MI_Ds3, KC_NO,  MI_Fs3, MI_Gs3, MI_As3, KC_NO,  MI_Cs4, MI_Ds4, KC_NO,   MI_Fs4,
+            MI_C3,   MI_D3,  MI_Ds3,  MI_F3,  MI_G3,  MI_Gs3,  MI_As3,  MI_C4,  MI_D4,  MI_Ds4,  MI_F4,   MI_G4,
+            MI_BNDD, MI_BNDU, MIDI_MONO, MIDI_POLY, KC_NO,  DF(0),  KC_NO,  KC_NO,  MI_TRSD,  MI_TRSU,  MI_TR0,   MI_AOFF
             ),
 };
 
